@@ -6,4 +6,12 @@
 //  Copyright © 2019 Jim Barry. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class MemeTableViewController: UITableViewController UIViewControllerTransitionDelegate {
+    var memes: [Meme]! {
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        return appDelegate.memes
+    }
+}
