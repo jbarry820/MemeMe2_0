@@ -86,10 +86,10 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         present(imagePicker, animated: true, completion: nil)
     }
     
-    func save() {
+    func save(_ generateMeme: UIImage) {
         
         // Create the meme
-        let meme = Meme(top: topText.text!, bottom: bottomText.text!, image: imageView.image, memedImage: memedImage())
+        let meme = Meme(topText: topText.text!, bottomText: bottomText.text!, image: imageView.image!, memedImage: generateMemedImage())
         
         // Add it to the memes array in the Application Delegate
         let object = UIApplication.shared.delegate
@@ -98,7 +98,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     @IBAction func shareMeme(_ sender: Any) {
-        let memedImage = generateMemedImange()
+        let memedImage = generateMemedImage()
         
         let activityController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
         
@@ -106,6 +106,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
             activity, success, items, error in
             if success {
                 self.save(memedImage)
+                //self.save()
                 self.dismiss(animated: true, completion: nil)
             }
         }
@@ -155,7 +156,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    func generateMemedImange() -> UIImage {
+    func generateMemedImage() -> UIImage {
         
         hideToolbars(true)
         
