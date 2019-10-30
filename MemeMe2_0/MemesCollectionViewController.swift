@@ -55,4 +55,7 @@ class MemesCollectionViewController: UICollectionViewController {
         navigationController!.pushViewController(detailController, animated: true)
 
     }
+    
+    
+    
 }

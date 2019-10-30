@@ -113,8 +113,20 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         present(activityController, animated: true, completion: nil)
     }
     
-    @IBAction func cancel(_ sender: Any) {
-        setupInitialView()
+//    @IBAction func cancel(_ sender: Any) {
+//        //setupInitialView()
+//        topText.isHidden = true
+//        bottomText.isHidden = true
+//        //imagePickerView.isHidden = true
+//        topText.text = "TOP"
+//        bottomText.text = "BOTTOM"
+//        dismiss(animated: true, completion: nil)
+//        setupInitialView()
+//    }
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        topText.isHidden = true
+        bottomText.isHidden = true
+        dismiss(animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

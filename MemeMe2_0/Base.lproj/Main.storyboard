@@ -65,7 +65,7 @@
         <scene sceneID="OaX-OU-Adg">
             <objects>
                 <navigationController title="Table" id="cdg-s4-CyK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Table" image="table" catalog="system" id="zBS-5X-UfR"/>
+                    <tabBarItem key="tabBarItem" title="Table" image="table" catalog="system" selectedImage="table" id="zBS-5X-UfR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vwd-Jm-TsF">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -118,14 +118,10 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="6Lz-Er-f6w">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="t56-OU-ooi">
-                            <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" id="DfJ-vV-UKN"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="t56-OU-ooi"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="flowLayout" destination="km9-R9-QgF" id="xa5-wy-SEV"/>
+                        <outlet property="flowLayout" destination="km9-R9-QgF" id="ubn-KC-M52"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ITx-Np-alO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -136,7 +132,7 @@
         <scene sceneID="VgP-6i-K6p">
             <objects>
                 <navigationController title="Collection" id="2Em-nF-Ks7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Collection" id="YPN-oi-Pfh"/>
+                    <tabBarItem key="tabBarItem" title="Collection" selectedImage="collection_30x30" id="YPN-oi-Pfh"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cwd-vu-IuB">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -194,7 +190,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="n3D-2S-TbC">
                                             <connections>
-                                                <action selector="cancel:" destination="BYZ-38-t0r" id="1fw-uD-E4v"/>
+                                                <action selector="cancel:" destination="BYZ-38-t0r" id="K1I-nI-d9b"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -264,10 +260,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="collection_30x30" width="30" height="30"/>
         <image name="plus" catalog="system" width="64" height="56"/>
         <image name="table" catalog="system" width="64" height="46"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="snf-U5-4I8"/>
-    </inferredMetricsTieBreakers>
 </document>
