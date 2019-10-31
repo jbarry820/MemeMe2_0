@@ -192,7 +192,11 @@
                                                 <action selector="shareMeme:" destination="BYZ-38-t0r" id="e0t-31-xcI"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="n3D-2S-TbC"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="n3D-2S-TbC">
+                                            <connections>
+                                                <action selector="cancel:" destination="BYZ-38-t0r" id="n3k-p4-JAx"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
