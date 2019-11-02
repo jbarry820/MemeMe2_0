@@ -120,8 +120,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         imageView.isHidden = true
         topText.text = "TOP"
         bottomText.text = "BOTTOM"
-        dismiss(animated: true, completion: nil)
-        //navigationController?.popViewController(animated: true)
+        //dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
