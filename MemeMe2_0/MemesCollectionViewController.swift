@@ -39,13 +39,14 @@ class MemesCollectionViewController: UICollectionViewController {
         
         //Set the image
         cell.memeImageView?.image = meme.memedImage
+        cell.memeImageView.contentMode = UIView.ContentMode.scaleAspectFit
         
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // Grab the DetailMeme from Storyboard
-        let detailController = self.storyboard!.instantiateViewController(withIdentifier: "VillainDetailViewController") as! MemeDetailViewController
+        let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
 
         //Populate view controller with data from the selected item
         //detailController.villain = allVillains[(indexPath as NSIndexPath).row]

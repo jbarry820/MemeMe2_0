@@ -16,6 +16,11 @@ class MemeTableViewController: UITableViewController, UIViewControllerTransition
         return appDelegate.memes
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.reloadData()
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memes.count
     }
