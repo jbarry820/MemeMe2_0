@@ -2,6 +2,9 @@
 
 MemeMe 2.0
 
+## Project Description
+This project demonstrates an app that enables a user to take a picture, and add text at the top and bottom to form a meme and then adding the picture to a collection or table.
+
 ## Getting Started
 
 * These instructions will get you a copy of the project up and running on your local machine for development and testing purposes:
