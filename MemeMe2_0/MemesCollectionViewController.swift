@@ -21,12 +21,13 @@ class MemesCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let space:CGFloat = 3.0
-        let dimension = (view.frame.width - (2 * space)) / 3.0
+        let space:CGFloat = 1.0
+        let dimension = (view.frame.size.width / 4.0)
         
         flowLayout.minimumInteritemSpacing = space
         flowLayout.minimumLineSpacing = space
-        flowLayout.itemSize = CGSize(width: dimension, height: dimension)
+        flowLayout.itemSize = CGSize(width: dimension - 1, height: dimension)
+        //flowLayout.itemSize = CGSize(width: (view.frame.size.width / 4) - 1, height: view.frame.size.width / 4)
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -55,6 +56,19 @@ class MemesCollectionViewController: UICollectionViewController {
         // Present the view controller using navigation
         navigationController!.pushViewController(detailController, animated: true)
 
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        var referenceHeight: CGFloat = 54.0 // Approximate height of the cell
+        // Cell width calculation
+        let sectionInset = (collectionViewLayout as! UICollectionViewFlowLayout).sectionInset
+        let referenceWidth = collectionView.safeAreaLayoutGuide.layoutFrame.width
+            - sectionInset.left
+            - sectionInset.right
+            - collectionView.contentInset.left
+            - collectionView.contentInset.right
+
+            return CGSize(width: referenceWidth, height: referenceHeight)
     }
     
     

@@ -162,14 +162,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lpc-OB-rV4">
-                                <rect key="frame" x="0.0" y="56" width="414" height="737"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lpc-OB-rV4">
+                                <rect key="frame" x="0.0" y="56" width="414" height="616"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="737" id="xf7-yB-iaq"/>
                                 </constraints>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b0v-Xc-5XQ">
-                                <rect key="frame" x="0.0" y="793" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="672" width="414" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="BOb-ug-GlL"/>
                                     <barButtonItem title="Pick" id="kTl-v2-ghg">
@@ -186,14 +186,6 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="IXg-JU-LpU"/>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u5U-TG-Mch">
-                                <rect key="frame" x="97" y="730" width="220" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="OLA-6G-LQ8"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                            </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nun-er-INT">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
@@ -211,10 +203,18 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r5Y-VX-6rq">
-                                <rect key="frame" x="97" y="147" width="221" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r5Y-VX-6rq">
+                                <rect key="frame" x="97" y="76" width="220" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EGF-8F-bg2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u5U-TG-Mch">
+                                <rect key="frame" x="97" y="604" width="220" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sl1-6U-UNn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -223,20 +223,20 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Nun-er-INT" firstAttribute="leading" secondItem="KIa-xc-9Z9" secondAttribute="leading" id="0oc-U2-NlQ"/>
-                            <constraint firstItem="b0v-Xc-5XQ" firstAttribute="leading" secondItem="Lpc-OB-rV4" secondAttribute="leading" id="2fW-5p-6iU"/>
-                            <constraint firstItem="r5Y-VX-6rq" firstAttribute="top" secondItem="Nun-er-INT" secondAttribute="bottom" constant="91" id="34D-oX-7Xn"/>
                             <constraint firstItem="r5Y-VX-6rq" firstAttribute="leading" secondItem="KIa-xc-9Z9" secondAttribute="leading" constant="97" id="4RF-ea-QQx"/>
+                            <constraint firstItem="b0v-Xc-5XQ" firstAttribute="leading" secondItem="Nun-er-INT" secondAttribute="leading" id="5ia-Fq-oBL"/>
+                            <constraint firstItem="r5Y-VX-6rq" firstAttribute="top" secondItem="Nun-er-INT" secondAttribute="bottom" constant="20" id="6HY-Zp-WjH"/>
                             <constraint firstItem="Nun-er-INT" firstAttribute="top" secondItem="KIa-xc-9Z9" secondAttribute="top" id="6TH-2Y-dxn"/>
                             <constraint firstItem="Nun-er-INT" firstAttribute="trailing" secondItem="Lpc-OB-rV4" secondAttribute="trailing" id="CIZ-kf-eM4"/>
-                            <constraint firstItem="r5Y-VX-6rq" firstAttribute="leading" secondItem="u5U-TG-Mch" secondAttribute="leading" id="EoC-Di-8Ac"/>
                             <constraint firstItem="r5Y-VX-6rq" firstAttribute="centerX" secondItem="Nun-er-INT" secondAttribute="centerX" id="OgW-Ci-pc2"/>
                             <constraint firstItem="Nun-er-INT" firstAttribute="leading" secondItem="Lpc-OB-rV4" secondAttribute="leading" id="Oye-a1-yjg"/>
+                            <constraint firstItem="KIa-xc-9Z9" firstAttribute="trailing" secondItem="u5U-TG-Mch" secondAttribute="trailing" constant="107" id="Tui-o4-Qbf"/>
                             <constraint firstItem="Nun-er-INT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wgq-AB-jRE"/>
                             <constraint firstItem="Lpc-OB-rV4" firstAttribute="top" secondItem="Nun-er-INT" secondAttribute="bottom" id="ck1-oN-fHH"/>
-                            <constraint firstItem="r5Y-VX-6rq" firstAttribute="trailing" secondItem="u5U-TG-Mch" secondAttribute="trailing" id="fEF-fO-hxF"/>
-                            <constraint firstItem="b0v-Xc-5XQ" firstAttribute="trailing" secondItem="Lpc-OB-rV4" secondAttribute="trailing" id="nA1-l7-ZD3"/>
-                            <constraint firstItem="b0v-Xc-5XQ" firstAttribute="top" secondItem="u5U-TG-Mch" secondAttribute="bottom" constant="33" id="rkO-KW-aP4"/>
-                            <constraint firstItem="b0v-Xc-5XQ" firstAttribute="top" secondItem="Lpc-OB-rV4" secondAttribute="bottom" id="vIj-Rv-Zch"/>
+                            <constraint firstItem="b0v-Xc-5XQ" firstAttribute="bottom" secondItem="KIa-xc-9Z9" secondAttribute="bottom" id="oD9-2v-zzo"/>
+                            <constraint firstItem="u5U-TG-Mch" firstAttribute="leading" secondItem="KIa-xc-9Z9" secondAttribute="leading" constant="108" id="qZM-MS-0pF"/>
+                            <constraint firstItem="b0v-Xc-5XQ" firstAttribute="trailing" secondItem="Nun-er-INT" secondAttribute="trailing" id="y6k-ON-IbE"/>
+                            <constraint firstItem="b0v-Xc-5XQ" firstAttribute="top" secondItem="u5U-TG-Mch" secondAttribute="bottom" constant="20" id="yob-wk-LRa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KIa-xc-9Z9"/>
                     </view>
@@ -252,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1632" y="-62"/>
+            <point key="canvasLocation" x="1628.985507246377" y="-1008.4239130434784"/>
         </scene>
         <!--Meme Detail View Controller-->
         <scene sceneID="MmS-cF-zQH">
@@ -308,6 +308,6 @@
         <image name="table" catalog="system" width="64" height="46"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="snf-U5-4I8"/>
+        <segue reference="DfJ-vV-UKN"/>
     </inferredMetricsTieBreakers>
 </document>
